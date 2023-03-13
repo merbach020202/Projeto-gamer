@@ -1,0 +1,71 @@
+/* imports das fontes */
+@font-face {
+    font-family: TitilliumWeb-Black;
+    src: url();
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #ffffff;
+}
+
+/* Classes genéricas */
+.layout-grid {
+    /* border: 1px solid salmon; */
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* justify content + align items */
+.alinhamento-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mobile First */
+
+/* HEADER */
+header {
+    height: 60px;
+    background-color: #1B1426;
+}
+
+/* Header Top */
+header .header-top {
+    display: none;
+}
+
+/* Header Bottom */
+
+
+header .header-bottom {
+    height: 100%;
+}
+
+header .header-bottom img.logo {
+    width: 86px;
+}
+
+header .header-bottom nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 80vw;
+    
+    height: calc (100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right Bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    border: 1px solid white;
+}
+
+header .header-bottom .menu-usuarios {
+    display: none;
+}
