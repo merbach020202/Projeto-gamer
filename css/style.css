@@ -1,7 +1,7 @@
 /* imports das fontes */
 @font-face {
-    font-family: TitilliumWeb-Black;
-    src: url();
+    font-family: Inter;
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
 }
 
 * {
@@ -33,6 +33,11 @@ body {
 
 /* HEADER */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100vw;
     height: 60px;
     background-color: #1B1426;
 }
@@ -56,16 +61,56 @@ header .header-bottom img.logo {
 header .header-bottom nav {
     position: fixed;
     top: 60px;
-    left: 0;
+    left: -80vw;
     width: 80vw;
+    height: calc(100vh - 60px);
     
-    height: calc (100vh - 60px);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
     background-image: linear-gradient(to right Bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    border: 1px solid white;
+    backdrop-filter: blur(45px);
 }
+
+/******** SOMENTE LINKS "FILHOS DIRETOS" ********/
+header .header-bottom nav > a {
+    padding: 30px 0;
+    color: white;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid #F9AA01;
+}
+
+header .header-bottom nav > a:last-of-type {
+    border-bottom: none;
+}
+
+/* Icone de midias sociais possibilidade position*/
+/* header .header-bottom .midias-sociais {
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+header .header-bottom .midias-sociais {
+    display: flex;
+    justify-content: center;
+    /* gap e o espacamento entre os elementos, funciona em linha e tambem em coluna  */
+    gap: 50px;
+}
+
+/* MENU LATERAL DIREITO - ICONES */
 
 header .header-bottom .menu-usuarios {
     display: none;
+   
 }
